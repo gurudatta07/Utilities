@@ -14,3 +14,6 @@ def get_project_dirs(root_dir: str, project: str) -> Tuple[str, str]:
     gfile.makedirs(data_dir)
     gfile.makedirs(work_dir)
     return data_dir, work_dir
+
+def test_method():
+    print("Calling io package of data-science-utils")
