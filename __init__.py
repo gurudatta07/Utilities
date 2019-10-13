@@ -1,2 +1,2 @@
 from . import io
-from . import colab_utils
+from . import colabUtils
