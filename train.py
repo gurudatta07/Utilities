@@ -1,6 +1,6 @@
 from .imports import *
 
-from .optim import SGD
+from .optimizers import SGD
 from .colabUtils import TPU_ADDRESS
 
 
