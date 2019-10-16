@@ -3,6 +3,8 @@ import tensorflow as tf
 import os
 import json
 
+TPU_ADDRESS = f'grpc://{os.environ["COLAB_TPU_ADDR"]}' if "COLAB_TPU_ADDR" in os.environ else None
+
 # Set up Google Cloud Storage for TPU.
 # :param tpu_address: network address of the TPU, starting with 'grpc://'. Default: Colab's TPU address.
 def setup_gcs(tpu_address: str = None):
@@ -28,3 +30,4 @@ def download_file(fn: str):
 # :param gdrive_path: local path to mount Google Drive to.
 def mount_google_drive(gdrive_path: str = './gdrive'):
     colab.drive.mount(gdrive_path)
+
